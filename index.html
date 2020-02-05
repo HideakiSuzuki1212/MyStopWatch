@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>StopWatch</title>
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="timer-container">
+        <div id="timer">00:00</div>
+        <div class="controls">
+          <div class="button" id="start">スタート</div>
+          <div class="button" id="stop">ストップ</div>
+          <div class="button" id="reset">リセット</div>
+        </div>
+      </div>
+      <div class="music_title">
+        <p>♪音楽ボタン♪</p>
+      </div>
+        <div class="music play" onclick="PlayMusic()">
+         <p>音楽再生♪</p>
+         <!-- <audio src="music/tabidachi.mp3" preload="auto" id="tabidachi"></audio> -->
+        </div>
+        <div class="music stop" onclick="StopMusic()">
+          <p>ストップ</p>
+        </div>
+      </div>
+
+
+      <script src="js/main.js"></script>
+      <script src="js/music.js"></script>
+
+  </body>
+</html>
