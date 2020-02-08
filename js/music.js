@@ -20,7 +20,7 @@ function PlayMusic(url){
   playMusic = new Audio(url);
   playMusic.play();
   playFlag = true;
-  pbtn.innerHTML = "ストップ";
+  pbtn.innerHTML = "<p>Ⅱ ストップ</p>";
 }
 
 function StopMusic(){
@@ -31,10 +31,10 @@ pbtn.addEventListener('click', function(){
     if (playFlag == false){
         playFlag = true;
         playMusic.play();
-        pbtn.innerHTML = "ストップ";
+        pbtn.innerHTML = "<p>Ⅱ ストップ</p>";
     } else {
         playFlag = false;
         playMusic.pause();
-        pbtn.innerHTML = "音楽再生♪";
+        pbtn.innerHTML = "<p>▶ 音楽再生♪</p>";
     }
 },true);
