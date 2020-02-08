@@ -3,8 +3,8 @@ let fileList = [
   { name : '残念…', url : 'music/incorrect1.mp3'},
   { name : '旅立ちの日に', url : 'music/tabidachi.mp3'},
 ];
-
 let playMusic = new Audio();
+let playFlag = false;
 let playList = '<ul>';
 for(let i=0; i < fileList.length; i++){
     playList +='<li onclick = PlayMusic("'+fileList[i].url+'")>'; //ここの意味がわからん
@@ -13,12 +13,28 @@ for(let i=0; i < fileList.length; i++){
 playList +='</ul>';
 document.getElementById("playListArea").innerHTML = playList;//ここは分かりそう。
 
+let pbtn = document.getElementById('playbtn');
+
 function PlayMusic(url){
   playMusic.pause();
   playMusic = new Audio(url);
   playMusic.play();
+  playFlag = true;
+  pbtn.innerHTML = "ストップ";
 }
 
 function StopMusic(){
   playMusic.pause();
 }
+
+pbtn.addEventListener('click', function(){
+    if (playFlag == false){
+        playFlag = true;
+        playMusic.play();
+        pbtn.innerHTML = "ストップ";
+    } else {
+        playFlag = false;
+        playMusic.pause();
+        pbtn.innerHTML = "音楽再生♪";
+    }
+},true);
