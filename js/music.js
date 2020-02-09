@@ -11,7 +11,7 @@ for(let i=0; i < fileList.length; i++){
     playList += fileList[i].name +'</li>';//ここも。
 }
 playList +='</ul>';
-document.getElementById("playListArea").innerHTML = playList;//IdがplayListAreaのところに変数のplayListを入れる。
+document.getElementById('playListArea').innerHTML = playList;
 
 let pbtn = document.getElementById('playbtn');
 
