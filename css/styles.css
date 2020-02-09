@@ -35,7 +35,7 @@ p {
 }
 
 .button {
-  width: 30%;
+  width: 45%;
   height: 80px;
   line-height: 80px;
   background: yellow;
@@ -46,6 +46,12 @@ p {
   border: solid 1px gray;
   font-size: 40px;
   margin-top: 20px;
+  box-shadow: 0px 6px 2px gray;
+}
+
+.button:active {
+  box-shadow: 0px 0px;
+  transform:translateY(6px);
 }
 
 .controls {
