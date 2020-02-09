@@ -7,11 +7,11 @@ let playMusic = new Audio();
 let playFlag = false;
 let playList = '<ul>';
 for(let i=0; i < fileList.length; i++){
-    playList +='<li onclick = PlayMusic("'+fileList[i].url+'")>'; //ここの意味がわからん
-    playList += fileList[i].name +'</li>';//ここもよくわからん。
+    playList +='<li onclick = PlayMusic("'+fileList[i].url+'")>'; //なんとなく分かるが言語化できない。
+    playList += fileList[i].name +'</li>';//ここも。
 }
 playList +='</ul>';
-document.getElementById("playListArea").innerHTML = playList;//ここは分かりそう。
+document.getElementById("playListArea").innerHTML = playList;//IdがplayListAreaのところに変数のplayListを入れる。
 
 let pbtn = document.getElementById('playbtn');
 
@@ -23,11 +23,7 @@ function PlayMusic(url){
   pbtn.innerHTML = "<p>Ⅱ ストップ</p>";
 }
 
-function StopMusic(){
-  playMusic.pause();
-}
-
-pbtn.addEventListener('click', function(){
+pbtn.addEventListener('click', () => {
     if (playFlag == false){
         playFlag = true;
         playMusic.play();
