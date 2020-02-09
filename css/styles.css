@@ -10,8 +10,22 @@ p {
 }
 
 ul {
+  display: inline-block;
+  width: 500px;
+  margin-bottom: 20px;
+  padding-inline-start:0px;
   list-style: none;
   font-size: 20px;
+}
+
+li {
+  margin: 0px;
+  border:1px solid #dfdfdf;
+  display: list-item;
+}
+
+li:hover {
+  background-color: silver;
 }
 
 .container {
@@ -69,19 +83,29 @@ ul {
   opacity: 0.6;
 }
 
+.playListArea {
+  display: inline-block;
+}
+
+.music-container {
+  display: flex;
+  align-items: center;
+}
+
 .music_title {
   font-size: 30px;
-  margin: 20px 0;
+  margin-top: 15px;
 }
 
 .music {
+  display: inline-block;
   width: 150px;
   background-color: tomato;
   border: gray;
   border-radius: 5px;
   cursor: pointer;
-  margin-bottom: 10px;
   padding: 20px 0px;
+  margin-left: 20px;
   user-select: none;
   text-align: center;
 }

@@ -1,7 +1,7 @@
 let fileList = [
-  { name : '正解！', url : 'music/correct1.mp3'},
-  { name : '残念…', url : 'music/incorrect1.mp3'},
-  { name : '旅立ちの日に', url : 'music/tabidachi.mp3'},
+  { name : 'BGM1', url : 'music/たのしいピアノ.mp3'},
+  { name : 'BGM2', url : 'music/ひとやすみ.mp3'},
+  { name : 'BGM3', url : 'music/癒しの時間.mp3'},
 ];
 let playMusic = new Audio();
 let playFlag = false;
